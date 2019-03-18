@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Calculadora IMC</string>
+
+    <string name="abaixo_peso_1">
+
+        Abaixo do peso I.
+
+    </string>
+    <string name="desc_abaixo_peso_1">
+
+        Anorexia, bulimia, osteoporose e auto consumo de massa muscular.
+
+    </string>
+
+    <string name="abaixo_peso">
+
+        Transtornos digestivos, delibelidade, fadiga>>>>
+
+    </string>
+
+    <string name="peso_normal">
+
+        Estado normal, bom nível de energia
+
+    </string>
+
+    <string name="a_cima_do_peso">
+
+        Anorexia, bulimia, osteoporose e auto consumo de massa muscular
+
+    </string>
+
+</resources>
