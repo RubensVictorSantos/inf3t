@@ -34,9 +34,10 @@ public class ContatoDAO extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        String sql = "DROP TABLE IF EXISTS tbl_contato";
+        //String sql = "DROP TABLE IF EXISTS tbl_contato";
+        String sql = "ALTER TABLE tbl_contato ADD COLUMN foto BLOB";
         db.execSQL(sql);
-        onCreate(db);
+        //onCreate(db);
 
     }
 

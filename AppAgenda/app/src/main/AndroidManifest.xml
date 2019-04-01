@@ -17,6 +17,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".CadastroContatoActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                >
+
+            </meta-data>
+
         </activity>
     </application>
 

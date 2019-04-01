@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CadastroFilmeActivity"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+            <ImageView
+                android:id="@+id/imageview_filme"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@drawable/ic_move"
+                />
+
+            <Button
+                android:id="@+id/btn_camera"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/floating_btn_camera"
+                android:layout_marginRight="10dp"
+                />
+
+            <Button
+                android:id="@+id/btn_galeria"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/floating_btn_galeria"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/btn_camera"
+                />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            >
+
+
+        <EditText
+            android:id="@+id/txt_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="titulo do filme"/>
+
+        <EditText
+            android:id="@+id/txt_data_lancamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="data de lançamento"
+            android:inputType="date"/>
+
+        <EditText
+            android:id="@+id/txt_diretor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Diretor"/>
+
+
+        <EditText
+            android:id="@+id/txt_genero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Genero do filme"/>
+
+        <EditText
+            android:id="@+id/txt_duracao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Duração do filme"
+            android:inputType="datetime"/>
+
+        <RatingBar
+            android:id="@+id/rate_nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:max="10"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

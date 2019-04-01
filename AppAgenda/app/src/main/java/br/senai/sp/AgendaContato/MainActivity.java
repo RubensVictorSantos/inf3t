@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import br.senai.sp.adapter.ContatoAdapter;
 import br.senai.sp.dao.ContatoDAO;
 import br.senai.sp.modelo.Contato;
 
@@ -62,6 +63,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         registerForContextMenu(listaContatos);
+
+        listaContatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {//Ele retorna AdapterView,View,posição e o id
+                Contato contato = (Contato) listaContatos.getItemAtPosition(position);
+
+                Intent cadastro = new Intent(MainActivity.this, CadastroContatoActivity.class);
+                //tudo na intent tem que ser serializado, para que possam ser remontados em outra activity
+                cadastro.putExtra("contato", contato);
+
+                startActivity(cadastro);
+
+                Toast.makeText(MainActivity.this, String.valueOf(position), Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     @Override
@@ -122,9 +139,8 @@ public class MainActivity extends AppCompatActivity {
         List<Contato> contatos = dao.getContatos();
         dao.close();
 
-        ArrayAdapter<Contato> listaContatosAdapter = new ArrayAdapter<Contato>(this, android.R.layout.simple_list_item_1, contatos);
-
-        listaContatos.setAdapter(listaContatosAdapter);
+        ContatoAdapter adapter = new ContatoAdapter(this, contatos);
+        listaContatos.setAdapter(adapter);
 
     }
 
